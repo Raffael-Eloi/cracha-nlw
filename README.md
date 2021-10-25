@@ -10,3 +10,5 @@ Agora é possível digitar seus dados em uma modal que aparece assim que o DOM �
 ![image](https://user-images.githubusercontent.com/51720161/138768534-2f755015-6ffd-4784-8ea5-6bcd53f2aaab.png)
 
 ## Como o projeto está no momento ?
+
+![cracha-nlw](https://user-images.githubusercontent.com/51720161/138769772-782b7693-982f-441b-9e8c-e5141aa46730.gif)
