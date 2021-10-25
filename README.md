@@ -8,3 +8,5 @@ Pretendo ir adicionando várias funcionalidades ao longo do tempo
 Agora é possível digitar seus dados em uma modal que aparece assim que o DOM é carregado e quando clicar no botão <strong>Personalizar crachá</strong> você terá seu crachá personalizado.
 
 ![image](https://user-images.githubusercontent.com/51720161/138768534-2f755015-6ffd-4784-8ea5-6bcd53f2aaab.png)
+
+## Como o projeto está no momento ?
