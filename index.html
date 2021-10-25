@@ -19,7 +19,7 @@
 <!-- Definindo linguagem da página HTML  -->
 <html lang="pt-br">
     <head>
-        <!-- Dicionário -->
+        <!-- Dicionário / Configuração de caracteres -->
         <meta charset="UTF-8">
 
         <!-- Definição de compatibilidade Internet explorer/edge -->
@@ -27,6 +27,8 @@
 
         <!-- Instruções ao browser de como controlar a dimensão das páginas-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="https://img.icons8.com/color/24/000000/rocket--v1.png" type="image/x-icon">
 
         <!-- CSS -->
         <link rel="stylesheet" href="style.css" />
@@ -40,16 +42,17 @@
         <title>NLW Heat - DoWhile 2021</title>
     </head>
     <body>
-        <main>
-            
+        <main id="mainContent">
             <div class="container">
                 <div class="avatar">
                     <!-- alt é a descrição da imagem -->
                     <!-- alt é muito importante principalmente para pessoas que possuem deficiência visual -->
+
                     <span>
                         <img src="images/build.svg" alt="Selo RocketSeat">
                     </span>
-                    <img id="userPhoto" src="http://lorempixel.com/185/185/people/" alt="Foto Pessoal">
+                    <!-- <img src="images/faixa.svg" alt="Quebra cracha"> -->
+                    <img id="userPhoto" src="" alt="Foto Pessoal">
                 </div>
 
                 <h1 id="userName">Nome Usuário</h1>
@@ -86,6 +89,46 @@
             </div>
             
         </main>
+
+        <!-- Campo para coleta de dados-->
+        <div id="modalWindowGetInfo" class="modalWindow">
+            <!-- Cabeçalho do modal -->
+            <div class="modalHeader">
+                <h1>Insira seus dados para criar seu crachá personalizado</h1>
+            </div>
+
+            <!-- Corpo do modal -->
+            <div class="modalBody">
+                <form>
+                    <label for="githubUserName">
+                        Nome de usuário no GitHub <br>
+                        <input type="text" id="githubUserName" autofocus>
+                    </label> <br><br>
+
+                    <label for="youtubeUserName">
+                        Nome do canal no Youtube <br>
+                        <input type="text" id="youtubeUserName">
+                    </label> <br><br>
+
+                    <label for="facebookUserName">
+                        Nome de usuário no Facebook <br>
+                        <input type="text" id="facebookUserName">
+                    </label> <br><br>
+
+                    <label for="instagramUserName">
+                        Nome de usuário no Instagram <br>
+                        <input type="text" id="instagramUserName">
+                    </label> <br><br>
+
+                    <button id="buttonSendInfo">Personalizar crachá</button>
+                </form>
+            </div>
+
+            <!-- Rodapé do modal -->
+            <div class="modalFooter">
+                <h4>Functionality developed by Raffael Eloi</h4>
+            </div>
+        </div>
 
         <!-- JavaScript -->
         <script src="main.js"></script>

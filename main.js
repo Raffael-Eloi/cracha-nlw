@@ -26,7 +26,7 @@ function changeSocialMediaLinks () {
   } 
 }
 
-changeSocialMediaLinks();
+// changeSocialMediaLinks();
 
 function getGitHubProfileInfos() {
   const url = `https://api.github.com/users/${linksSocialMedia.github}`;
@@ -56,4 +56,53 @@ function getGitHubProfileInfos() {
   // (args1, args2) => { //code here } --- Recebe 2 ou mais argumentos
 }
 
-getGitHubProfileInfos();
+// getGitHubProfileInfos();
+
+function showModalWindow() {
+  let modal = document.getElementById("modalWindowGetInfo");
+  modal.style.display= "block";
+  var form = document.querySelector("form");
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    let main = document.getElementById("mainContent");
+    main.style.display = "block";
+    modal.style.display= "none";
+
+    let githubUserCustom = document.getElementById("githubUserName").value;
+    let youtubeUserCustom = document.getElementById("youtubeUserName").value;
+    let facebookUserCustom = document.getElementById("facebookUserName").value;
+    let instagramUserCustom = document.getElementById("instagramUserName").value;
+
+    const bagdeCustom = {
+      github: githubUserCustom,
+      youtube: youtubeUserCustom,
+      facebook: facebookUserCustom,
+      instagram: instagramUserCustom
+    }
+    console.log(bagdeCustom.github);
+
+    const url = `https://api.github.com/users/${bagdeCustom.github}`;
+    console.log(url);
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+    userPhoto.src = data.avatar_url;
+    userName.textContent = data.name;
+    userBio.textContent = data.bio;
+    userLogin.textContent = data.login;
+    userLink.href = data.html_url;
+
+    for( let li of socialLinks.children) {
+      const social = li.getAttribute('class'); // Essa função está pegando o nome da classe dos li
+
+      li.children[0].href = `https://${social}.com/${bagdeCustom[social]}`;
+      // Essa `` é chamada template-string
+      // template-string deixa meio que concatenar um texto com variáveis
+      
+      // alert(li.children[0].href);
+  }
+
+  });
+  })}
+
+document.addEventListener("DOMContentLoaded", showModalWindow());
