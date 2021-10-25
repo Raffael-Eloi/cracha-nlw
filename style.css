@@ -1,0 +1,88 @@
+* { /* Este é um seletor universal */
+    margin: 0;
+}
+
+html, body {
+    --gray: hsl(240, 9%, 89%); /* Definição de uma variável */
+    /* H - Hue (Cor, tom) */
+    /* S - Saturation (saturação) */
+    /* L - Lightness (Luz, iluminação) */
+
+    --black: hsl(240, 6%, 13%)
+
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased; /* Funciona apenas em navegadores webkit | Fonte fica mais suave*/
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+main {
+    background: url(images/background.svg);
+    width: 375px;
+    height: 812px;
+}
+
+.container {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    color: var(--gray);
+}
+
+.avatar {
+    width: 10rem;
+    margin: 11.5rem auto 0;
+    position: relative;
+}
+
+.avatar span {
+    position: absolute;
+    top: -15px;
+    z-index: 1; /* Após definição do polígono a configuração foi perdida, então é para retomar a posição no eixo Z (eixo de profundidade em 3° dimensão)*/
+    /* Eixo X - horizontal */
+    /* Eixo Y - vertical */
+}
+
+.avatar > img { /* Para pegar apenas a imagem que está no primeiro nível */
+    width: 10rem;
+    height: 11.5rem;
+    object-fit: cover; /* Correção para o esticamento de imagem, nesse caso é coberto o esticamento realizado*/
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+a {
+    color: var(--gray);
+    text-decoration: none;
+
+    margin-top: 0.25rem;
+
+    display: flex;
+    gap: 0.75rem;
+
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin-top: 2rem;
+}
+
+ul {
+    margin-top: 4rem;
+    list-style: none;
+    padding: 0;
+    display: flex; /* Trabalha com uma caixa ao lado da outra */
+    gap: 0.5rem;
+    justify-content: center;
+}

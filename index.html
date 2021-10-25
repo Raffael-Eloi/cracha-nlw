@@ -1,0 +1,94 @@
+<!-- 
+    HTML
+    HyperText (Hiper texto) - é um texto com link
+        Um hipertexto consegue navegar de um lugar para outro
+    Markup (Marcação) - tags
+    Language (Linguagem) - regras de uma linguagem
+
+    CSS 
+    Cascating Stylesheet (Folha de estilo em cascata)
+        Ordem de aparição dos elementos
+    Sempre os elementos possuem: propriedade e valor
+    elemento {
+        propriedade: valor;
+    }
+    Os estilos padrão é definido pelo Browser (Navegador, User Agent)
+-->
+
+<!DOCTYPE html>
+<!-- Definindo linguagem da página HTML  -->
+<html lang="pt-br">
+    <head>
+        <!-- Dicionário -->
+        <meta charset="UTF-8">
+
+        <!-- Definição de compatibilidade Internet explorer/edge -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Instruções ao browser de como controlar a dimensão das páginas-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- Fonte -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Título -->
+        <title>NLW Heat - DoWhile 2021</title>
+    </head>
+    <body>
+        <main>
+            
+            <div class="container">
+                <div class="avatar">
+                    <!-- alt é a descrição da imagem -->
+                    <!-- alt é muito importante principalmente para pessoas que possuem deficiência visual -->
+                    <span>
+                        <img src="images/build.svg" alt="Selo RocketSeat">
+                    </span>
+                    <img id="userPhoto" src="http://lorempixel.com/185/185/people/" alt="Foto Pessoal">
+                </div>
+
+                <h1 id="userName">Nome Usuário</h1>
+                <a id="userLink" href="https://github.com/Raffael-Eloi" target="_blank">
+                    <img src="images/github.svg" alt="Ícone github">
+                    <span id="userLogin">Raffael-Eloi</span>
+                </a>
+
+                <p id="userBio">An instructor focused on helping people start programming for web</p>
+
+                <ul id="socialLinks"> <!-- PAREI NO 46:35 -->
+                    <li class="youtube"> <!-- Youtube -->
+                        <a href="https://youtube.com/rocketseat" target="_blank"> <!-- Esse target é para abrir o conteúdo em outra guia-->
+                            <img src="images/youtube.svg" alt="Ícone youtube">
+                            <!-- SVG: mais definição, pode ter o tamanho modificado e ocupa menos espaço-->
+                        </a>
+                    </li>
+                    <li class="facebook"> <!-- Facebook -->
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="images/facebook.svg" alt="Ícone facebook">
+                        </a>
+                    </li>
+                    <li class="instagram"> <!-- Instagram -->
+                        <a href="https://instagram.com/raffa_eloi" target="_blank">
+                            <img src="images/instagram.svg" alt="Ícone instagram">
+                        </a>
+                    </li>
+                    <li class="twitter"> <!-- Twitter -->
+                        <a href="https://twiter.com" target="_blank">
+                            <img src="images/twitter.svg" alt="Ícone twitter">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </main>
+
+        <!-- JavaScript -->
+        <script src="main.js"></script>
+        
+    </body>
+</html>
